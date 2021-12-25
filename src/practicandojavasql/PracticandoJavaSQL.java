@@ -1,21 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package practicandojavasql;
 
+import java.sql.SQLException;
+
 /**
- *
+ * Clase principal
+ * 
  * @author alber
  */
 public class PracticandoJavaSQL {
 
     /**
      * @param args the command line arguments
+     * @throws java.sql.SQLException
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static void main(String[] args) throws SQLException, Exception {
+        // Voy a insertar un usuario en la DB
+        UsuarioDAO ud = new UsuarioDAO();
+        ud.registrarUsuario("Guzman", "Gonzalez", 12);
     }
     
 }
